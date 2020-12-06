@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const numArr = [1, 2, 3, 4, 5];
+/*       numArr.reduce((previousValue, currentValue, index) => {
+        console.log(previousValue, currentValue, index);
+        return currentValue;
+      }, 0) */
+
+      numArr.reduce((accumulator, currentValue) => {
+        console.log(accumulator, currentValue);
+        return accumulator + currentValue
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

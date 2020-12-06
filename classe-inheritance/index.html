@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      class Mobiles {
+        constructor(storage, ram) {
+          this.storage = storage;
+          this.ram = ram;
+        }
+        phoneDetails() {
+          console.log(`This phone has ${this.storage} and ${this.ram}`)
+        }
+      }
+
+      class OldPhones extends Mobiles {
+        constructor(storage, ram){
+          super(storage, ram);
+        }
+      }
+
+      var myOldPhone = new OldPhones('64GB', '4GB');
+      myOldPhone.phoneDetails();
+    </script>
+  </head>
+  <body></body>
+</html>

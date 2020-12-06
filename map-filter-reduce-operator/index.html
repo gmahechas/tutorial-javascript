@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+      // first option
+      var collection = [1, 2, 3, 4, 5];
+      function inc(x) {
+        return x + 1;
+      }
+      let result = collection.map(inc);
+      console.log(result);
+
+      // second option
+      var collection2 = [1, 2, 'hi', 4, 5];
+      function isString(value) {
+        return typeof(value) == 'string';
+      }
+
+      let result2 = collection2.filter(isString);
+      console.log(result2);
+
+      // reduce
+      var collection3 = [1, 2, 3, 4, 5];
+      function sum(x,y) {
+        return x + y;
+      }
+
+      let result3 = collection3.reduce(sum, 0);
+      console.log(result3);
+
+    </script>
+  </head>
+  <body></body>
+</html>

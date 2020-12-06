@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // shape of function
+      const isOdd = (v) => {
+        return v % 2 == 1;
+      }
+
+      const isEven = (v) => {
+        return !isOdd(v);
+      }
+
+      const not = (fn) => {
+        return function negated(...args) {
+          return !fn(...args);
+        }
+      }
+
+      // here i dont need isEven func
+      const even = not(isOdd)
+      console.log(even(3)); // false
+    </script>
+  </head>
+  <body></body>
+</html>
